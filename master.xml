@@ -1,0 +1,23 @@
+<plugin>
+            <groupId>net.masterthought</groupId>
+            <artifactId>maven-cucumber-reporting</artifactId>
+            <version>4.5.0</version>
+            <executions>
+                <execution>
+                    <id>execution</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                    <configuration>
+                        <projectName>ExecuteAutomation</projectName>
+                        <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
+                        <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+                        <jsonFiles>
+                            <!-- supports wildcard or name pattern -->
+                            <param>**/*.json</param>
+                        </jsonFiles>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
